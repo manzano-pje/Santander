@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        .container{
+            border:1px solid black;
+            max-width: 350px;
+            display: flex;
+        }
+        .item{
+            background-color: orange;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .fb{
+            flex-basis: 100px;
+        }
+        .s0{
+            flex-shrink: 0;
+
+        }
+        .s1{
+            flex-shrink: 1;
+        }
+        .s2{
+            flex-shrink: 2;
+            
+        }
+        .s3{
+            flex-shrink: 3;
+  
+        }
+        .fg{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-shrin:1</p>
+    <div class="container">
+        <div class="item s1">A</div>
+        <div class="item s1">B</div>
+        <div class="item s1">C</div>
+        <div class="item s1">D</div>
+    </div>
+    <p>flex-shrin:0 flex-grow:1 flex basis:100px</p>
+    <div class="container">
+        <div class="item s0 fg1 fb">A</div>
+        <div class="item s0 fg1 fb">B</div>
+        <div class="item s0 fg1 fb">C</div>
+        <div class="item s0 fg1 fb">D</div>
+    </div>
+    <p>flex-shrin:2</p>
+    <div class="container">
+        <div class="item s2 fg1">A</div>
+        <div class="item s2 fg1">Neque porro quisquam </div>
+        <div class="item s2 fg1">C</div>
+        <div class="item s2 fg1">D</div>
+    </div>
+    <p>flex-shrin:misto1</p>
+    <div class="container">
+        <div class="item s2">A</div>
+        <div class="item s1">BBB</div>
+        <div class="item s3">Neque porro quisquam </div>
+        <div class="item s2">DDDD</div>
+    </div>
+
+    <p>flex-shrin:misto2</p>
+    <div class="container">
+        <div class="item s0 fg1 fb">A</div>
+        <div class="item s1 fg1 fb">BBB</div>
+        <div class="item s0 fg1 fb">Neque porro quisquam </div>
+        <div class="item s0 fg1 fb">DDDD</div>
+    </div>
+
+</body>
+</html>

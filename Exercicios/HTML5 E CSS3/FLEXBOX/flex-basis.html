@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-basis</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            max-width: 300px;
+            display: flex;
+        }
+        .item{
+            background-color: coral;
+            color:black;
+            text-align: center;
+            margin: 5px;
+        }
+        .bauto{
+            flex-basis: auto;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .b-w100{
+            flex-basis: 100px;
+        }
+        .b-percent{
+            flex-basis: 10%;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-basis auto flex-grow em apenas 1 item</p>
+    <div class="container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto ">BBB</div>
+        <div class="item bauto ">C</div>
+        <div class="item bauto ">DEF</div>
+    </div>
+
+    <p>flex-basis auto e flex-grow 1</p>
+    <div class="container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-1">DEF</div>
+    </div>
+
+    <p>flex-basis com width</p>
+    <div class="container">
+        <div class="item b-w100 ">A</div>
+        <div class="item b-percent fg-1 ">BBB</div>
+        <div class="item b-percent fg-1">C</div>
+        <div class="item b-percent fg-1">DEF</div>
+    </div>
+    <p>flex-basis com quebrade linha</p>
+    <div class="container">
+        <div class="item bauto fg-1">AAAA<br>BBBBBB</div>
+        <div class="item bauto fg-1 ">BBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-1">DEF</div>
+    </div>
+
+</body>
+</html>
