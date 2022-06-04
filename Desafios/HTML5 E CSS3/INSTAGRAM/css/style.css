@@ -13,7 +13,6 @@ body{
     min-height: 100vh;
 }
 .wrapper{
-
     width: 50%;
     display: flex;
     align-items: center;
@@ -24,18 +23,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-right: 10px;
 
 }
 .celular img{
-   width: 700px;
+   height: 50rem;
    padding: 0;
 }
 
 .acesso{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
+    justify-content: flex-start;
     align-items: center;
+    padding: 0 20px;
 }
 
 .box-acesso{
@@ -118,4 +120,30 @@ body{
 }
 .download img{
     max-width: 150px;
+}
+
+/*mobile*/
+
+@media(max-width:930px){
+    .wrapper{
+        width: 85%;
+    }
+}
+
+@media(max-width:720px){
+    body{
+        background-color: #fff;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .celular{
+        display: none;
+    }
+    .acesso{
+        width: 100%;
+    }
+    .box-acesso{
+        border: 1px solid transparent;
+    }
 }
